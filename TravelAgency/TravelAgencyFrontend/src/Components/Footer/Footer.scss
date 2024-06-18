@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@200;500;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ALL project colors */
+:root {
+    --primaryColor: hsl(189, 40%, 69%);
+    --primaryColorLight: hsl(190, 14%, 75%);
+    --bColor: hsl(0, 0%, 100%);
+    --formColor: hsl(20, 42%, 87%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --greyText: hsl(0, 0%, 51%);
+    --inputColor: hsl(330, 12%, 97%);
+    --cardColor: hsl(300, 3%, 94%);
+    /* Font and Typography */
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 2rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: 0.938rem;
+    --smallFontSize: 0.813rem;
+    --smallestFontSize: 0.75rem;
+    --borderRadius: 3rem;
+}
+
+    .footer {
+        background-color: hsl(189, 40%, 69%);
+        color: #000000;
+        padding: 40px 20px;
+        text-align: left;
+    
+        .secContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    
+        .logoDiv {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+    
+            .footerLogo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+    
+            .icon {
+                font-size: 1.5rem;
+                margin-right: 10px;
+                color: #000000;
+            }
+    
+            span {
+                font-size: 1.5rem;
+                font-weight: bold;
+            }
+            }
+    
+            .socials {
+            display: flex;
+            gap: 10px;
+    
+            .icon {
+                font-size: 1.2rem;
+                color: #000000;
+                transition: color 0.3s ease;
+                justify-content: center;
+    
+                &:hover {
+                color: #000000;
+                }
+            }
+            }
+        }
+    
+        .footerLinks {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+    
+            .linkTitle {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+            }
+    
+            li {
+            list-style: none;
+            margin: 5px 0;
+    
+            a {
+                color: #000000;
+                text-decoration: none;
+                transition: color 0.3s ease;
+    
+                &:hover {
+                color: #000000;
+                }
+            }
+            }
+        }
+    
+        .footerLinks:last-child {
+            .phone,
+            .email {
+            display: block;
+            margin: 5px 0;
+            }
+        }
+        }
+    }
+    
+    @media screen and (max-width: 768px) {
+        .secContainer {
+        flex-direction: column;
+        align-items: center;
+        }
+    
+        .footerLinks {
+        align-items: center;
+        text-align: center;
+        }
+    
+        .logoDiv {
+        align-items: center;
+    
+        .footerLogo {
+            justify-content: center;
+        }
+        }
+    }

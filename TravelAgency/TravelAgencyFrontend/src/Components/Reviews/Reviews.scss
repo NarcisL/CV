@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@200;500;700;900&display=swap');
+
+/* ALL project colors */
+:root {
+    --primaryColor: hsl(189, 40%, 69%);
+    --primaryColorLight: hsl(178, 38%, 45%);
+    --bColor: hsl(0, 0%, 100%);
+    --formColor: hsl(20, 42%, 87%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --greyText: hsl(0, 0%, 51%);
+    --inputColor: hsl(330, 12%, 97%);
+    --cardColor: hsl(300, 3%, 94%);
+    /* Font and Typography */
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 1.6rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: 0.938rem;
+    --smallFontSize: 0.813rem;
+    --smallestFontSize: 0.75rem;
+    --borderRadius: 3rem;
+}
+
+.review {
+    .secContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+
+        .textDiv {
+            .redText {
+                font-size: var(--smallFontSize);
+                color: hsl(14, 96%, 61%);
+                font-weight: 700;
+            }
+
+            h3 {
+                font-size: var(--h1FontSize);
+                color: var(--blackColor);
+                padding: 1rem 0;
+            }
+
+            p {
+                color: var(--blackColor);
+                font-size: var(--normalFontSize);
+                line-height: 1.6;
+            }
+
+            .stars {
+                display: flex;
+                gap: 0.4rem;
+                padding: 1rem 0;
+
+                .icon {
+                    color: var(--primaryColor);
+                    font-size: var(--h3FontSize);
+                }
+            }
+
+            .clientsImages {
+                display: flex;
+                gap: 0.5rem;
+
+                img {
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    border: 2px solid var(--whiteColor);
+                    box-shadow: 0 0 2px 2px hsl(180, 5%, 38%);
+                }
+            }
+        }
+
+        .imgDiv {
+            height: 250px;
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 480px) {
+    .review {
+        .secContainer {
+            .textDiv {
+                .redText {
+                    font-size: var(--smallFontSize);
+                }
+
+                h3 {
+                    font-size: var(--h1FontSize);
+                }
+
+                p {
+                    font-size: var(--normalFontSize);
+                }
+
+                .stars .icon {
+                    font-size: var(--h2FontSize);
+                }
+
+                .clientsImages img {
+                    height: 35px;
+                    width: 35px;
+                }
+            }
+
+            .imgDiv {
+                height: 250px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 740px) {
+    .review {
+        .secContainer {
+            grid-template-columns: repeat(2, 1fr);
+
+            .textDiv {
+                .redText {
+                    font-size: var(--smallFontSize);
+                }
+
+                h3 {
+                    font-size: var(--h1FontSize);
+                }
+
+                p {
+                    font-size: var(--normalFontSize);
+                }
+
+                .stars .icon {
+                    font-size: var(--h2FontSize);
+                }
+
+                .clientsImages img {
+                    height: 40px;
+                    width: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .review {
+        .secContainer {
+            gap: 3rem;
+
+            .textDiv {
+                .redText {
+                    font-size: var(--normalFontSize);
+                    color: var(--primaryColor);
+                }
+
+                h3 {
+                    font-size: var(--h1FontSize);
+                }
+
+                p {
+                    font-size: var(--h3FontSize);
+                    line-height: 2rem;
+                }
+            }
+
+            .imgDiv {
+                height: 300px;
+            }
+        }
+    }
+}

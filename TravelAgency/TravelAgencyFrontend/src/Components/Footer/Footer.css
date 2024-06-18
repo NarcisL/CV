@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@200;500;700;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ALL project colors */
+:root {
+  --primaryColor: hsl(189, 40%, 69%);
+  --primaryColorLight: hsl(190, 14%, 75%);
+  --bColor: hsl(0, 0%, 100%);
+  --formColor: hsl(20, 42%, 87%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --greyText: hsl(0, 0%, 51%);
+  --inputColor: hsl(330, 12%, 97%);
+  --cardColor: hsl(300, 3%, 94%);
+  /* Font and Typography */
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 2rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+  --borderRadius: 3rem;
+}
+
+.footer {
+  background-color: hsl(189, 40%, 69%);
+  color: #000000;
+  padding: 40px 20px;
+  text-align: left;
+}
+.footer .secContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer .secContainer .logoDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer .secContainer .logoDiv .footerLogo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.footer .secContainer .logoDiv .footerLogo .icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  color: #000000;
+}
+.footer .secContainer .logoDiv .footerLogo span {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.footer .secContainer .logoDiv .socials {
+  display: flex;
+  gap: 10px;
+}
+.footer .secContainer .logoDiv .socials .icon {
+  font-size: 1.2rem;
+  color: #000000;
+  transition: color 0.3s ease;
+  justify-content: center;
+}
+.footer .secContainer .logoDiv .socials .icon:hover {
+  color: #000000;
+}
+.footer .secContainer .footerLinks {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.footer .secContainer .footerLinks .linkTitle {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.footer .secContainer .footerLinks li {
+  list-style: none;
+  margin: 5px 0;
+}
+.footer .secContainer .footerLinks li a {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.footer .secContainer .footerLinks li a:hover {
+  color: #000000;
+}
+.footer .secContainer .footerLinks:last-child .phone,
+.footer .secContainer .footerLinks:last-child .email {
+  display: block;
+  margin: 5px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .secContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footerLinks {
+    align-items: center;
+    text-align: center;
+  }
+  .logoDiv {
+    align-items: center;
+  }
+  .logoDiv .footerLogo {
+    justify-content: center;
+  }
+}/*# sourceMappingURL=Footer.css.map */

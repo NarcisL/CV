@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@200;500;700;900&display=swap");
+:root {
+  --primaryColor: hsl(189, 40%, 69%);
+  --primaryColorLight: hsl(14, 96%, 91%);
+  --bColor: hsl(0, 0%, 100%);
+  --formColor: hsl(20, 42%, 87%);
+  --whiteColor: hsl(0, 0%, 100%);
+  --blackColor: hsl(0, 0%, 18%);
+  --greyText: hsl(0, 0%, 51%);
+  --inputColor: hsl(330, 12%, 97%);
+  --cardColor: hsl(300, 3%, 94%);
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 2rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+  --borderRadius: 3rem;
+}
+
+/* Destinations section */
+.destination {
+  width: 100%;
+}
+.destination .secContainer {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 0;
+}
+.destination .secContainer .secTitle {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.destination .secContainer .secTitle .redText {
+  color: var(--primaryColor);
+  font-size: var(--smallestFontSize);
+  font-weight: 500;
+}
+.destination .secContainer .secTitle h3 {
+  font-size: var(--h1FontSize);
+  margin: 1rem 0;
+}
+.destination .secContainer .secTitle p {
+  font-size: var(--h3FontSize);
+  color: var(--greyText);
+  line-height: 1.5;
+}
+.destination .secContainer .searchField {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.destination .secContainer .searchField .inputField {
+  background: var(--primaryColor);
+  padding: 1rem;
+  border-radius: var(--borderRadius);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.destination .secContainer .searchField .inputField input {
+  background: transparent;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: var(--blackColor);
+  font-size: var(--normalFontSize);
+  transition: all 0.3s ease-in-out;
+  padding: 0.8rem;
+  border-bottom: 2px solid transparent;
+}
+.destination .secContainer .searchField .inputField input:focus {
+  border-bottom-color: var(--primaryColor);
+}
+.destination .secContainer .searchField .inputField .icon {
+  color: var(--whiteColor);
+  font-size: var(--h3FontSize);
+}
+.destination .secContainer .searchField .btn {
+  background-color: hsl(180, 16%, 9%);
+  color: var(--whiteColor);
+  border: none;
+  border-radius: var(--borderRadius);
+  padding: 1rem 2rem;
+  font-size: var(--normalFontSize);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+.destination .secContainer .searchField .btn:hover {
+  background-color: var(--primaryColor);
+  transform: translateY(-3px);
+}
+.destination .secContainer .searchField .btn .icon {
+  color: var(--whiteColor);
+  font-size: var(--h3FontSize);
+}
+.destination .secContainer .secMenu {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+.destination .secContainer .secMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.destination .secContainer .secMenu ul li {
+  background: transparent;
+  padding: 10px 17px;
+  border-radius: var(--borderRadius);
+  color: var(--blackColor);
+  border: 1.5px dashed transparent;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.destination .secContainer .secMenu ul li:hover {
+  color: var(--primaryColor);
+  border-color: var(--primaryColor);
+  transform: scale(1.05);
+}
+.destination .secContainer .destinationContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+.destination .secContainer .destinationContainer .singleDestination {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  height: 300px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.destination .secContainer .searchField .btn {
+  background-color: var(--primaryColor);
+  color: var(--whiteColor);
+  border: none;
+  border-radius: var(--borderRadius);
+  padding: 1rem 2rem;
+  font-size: var(--normalFontSize);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.destination .secContainer .searchField .btn:hover {
+  background-color: var(--primaryColorLight);
+  transform: translateY(-3px);
+}
+
+.destination .secContainer .searchField .btn .icon {
+  color: var(--whiteColor);
+  font-size: var(--h3FontSize);
+}
+
+
+.destination .secContainer .destinationContainer .singleDestination:hover {
+  transform: scale(1.05);
+}
+.destination .secContainer .destinationContainer .singleDestination .imgDiv {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+}
+.destination .secContainer .destinationContainer .singleDestination .imgDiv img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
+}
+.destination .secContainer .destinationContainer .singleDestination .descInfo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.8);
+  color: var(--whiteColor);
+  transition: all 0.3s ease-in-out;
+}
+.destination .secContainer .destinationContainer .singleDestination .descInfo .name {
+  font-weight: 500;
+  font-size: var(--h2FontSize);
+  margin-bottom: 0.5rem;
+}
+.destination .secContainer .destinationContainer .singleDestination .descInfo .flex {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.destination .secContainer .destinationContainer .singleDestination .descInfo .flex .icon {
+  font-size: var(--normalFontSize);
+}
+.destination .secContainer .destinationContainer .singleDestination .descInfo .bookButton {
+  background: var(--primaryColor);
+  border: none;
+  color: var(--whiteColor);
+  border-radius: var(--borderRadius);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.destination .secContainer .destinationContainer .singleDestination .descInfo .bookButton:hover {
+  background: var(--primaryColorLight);
+}
+.destination .secContainer .destinationContainer .singleDestination .rating {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--whiteColor);
+  padding: 0.5rem 1rem;
+  border-radius: var(--borderRadius);
+  font-size: var(--normalFontSize);
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (min-width: 1400px) {
+  .destination .secContainer .destinationContainer {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}/*# sourceMappingURL=Destinations.css.map */

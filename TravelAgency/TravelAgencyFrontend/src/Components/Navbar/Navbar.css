@@ -1,0 +1,239 @@
+.navBar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logoDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoDiv .icon {
+  margin-right: 10px;
+  width: 50px;
+  height: 50px; 
+  color:rgb(59, 57, 57);
+}
+
+.menu {
+  display: flex;
+}
+
+.navList {
+  list-style: none;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.navList:hover {
+  text-decoration: underline;
+}
+
+.signInBtn {
+  padding: 5px 10px;
+  border-radius: 5px;
+  color:black;
+}
+
+.navListWithIcon {
+  display: flex;
+  align-items: center;
+}
+
+.userIcon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.5rem 2rem;
+  position: fixed;
+  border-bottom: 1.5px solid rgba(181, 176, 176, 0.888);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.737);
+}
+
+.logoDiv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoDiv span {
+  color: var(--blackColor);
+  font-size: var(--h3FontSize);
+  justify-content: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  color:black;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.menu li {
+  font-size: var(--h3FontSize);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.menu li:hover {
+  color: var(--primaryColor);
+  border-bottom: 1.5px solid var(--primaryColor);
+}
+
+.menuIcon, .closeIcon {
+  font-size: var(--h1FontSize);
+  cursor: pointer;
+}
+
+.menuIcon:hover, .closeIcon:hover {
+  color: var(--primaryColor);
+}
+
+.closeIcon {
+  display: none;
+}
+
+.showNavbar {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 70%;
+  top: 8rem;
+  right: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.94);
+  padding: 2rem;
+  border-radius: 10px;
+  transition: top 0.8s ease-in-out;
+  box-shadow: 0 2px 3px 4px rgba(0, 76, 127, 0.94);
+  backdrop-filter: blur(5px);
+  z-index: 999;
+}
+
+.closeIcon.show {
+  display: block;
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--blackColor);
+}
+
+/* Styles for the Sign Up button */
+.signUpBtn {
+  background-color: var(--primaryColor);
+  color: var(--whiteColor);
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: var(--borderRadius);
+  cursor: pointer;
+  font-size: var(--normalFontSize);
+  transition: background-color 0.3s ease;
+}
+
+.signUpBtn:hover {
+  background-color: var(--primaryColorLight);
+}
+
+.changePasswordForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.changePasswordForm form {
+  display: flex;
+  flex-direction: column;
+}
+
+.changePasswordForm label {
+  margin-bottom: 5px;
+  color:black;
+}
+
+.changePasswordForm input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.changePasswordForm button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+}
+
+.changePasswordForm button:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (min-width: 768px) {
+  .navBar .logoDiv span {
+    font-size: var(--h2FontSize);
+  }
+
+  .menu ul {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .menu li {
+    font-size: var(--h3FontSize);
+    font-size: 500;
+    padding: 1rem 0;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .menu li:hover {
+    color: var(--primaryColor);
+    border-bottom: 1.5px solid var(--primaryColor);
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .navBar {
+    padding: 2rem 6rem;
+  }
+
+  .menu ul {
+    gap: 4rem;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .navBar {
+    padding: 2rem 14rem;
+  }
+}

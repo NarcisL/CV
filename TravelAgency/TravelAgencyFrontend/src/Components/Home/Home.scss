@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@200;500;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ALL project colors */
+:root {
+    --primaryColor: hsl(189, 40%, 69%);
+    --primaryColorLight: hsl(14, 96%, 91%);
+    --bColor: hsl(0, 0%, 100%);
+    --formColor: hsl(20, 42%, 87%);
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(0, 0%, 18%);
+    --greyText: hsl(0, 0%, 51%);
+    --inputColor: hsl(330, 12%, 97%);
+    --cardColor: hsl(300, 3%, 94%);
+    /* Font and Typography */
+    --biggestFontSize: 2.5rem;
+    --h1FontSize: 2rem;
+    --h2FontSize: 1.25rem;
+    --h3FontSize: 1rem;
+    --normalFontSize: 0.938rem;
+    --smallFontSize: 0.813rem;
+    --smallestFontSize: 0.75rem;
+    --borderRadius: 3rem;
+}
+
+.Home {
+    position: relative;
+    height: 95vh;
+    width: 100%;
+    top: 0;
+}
+
+.Home .videoBg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.Home .videoBg video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.Home .sectionText {
+    position: absolute;
+    top: 30%;
+    width: 100%;
+    color: var(--whiteColor);
+    padding: 0 1.3rem;
+    text-align: center;
+}
+
+.Home .sectionText h1 {
+    font-size: var(--biggestFontSize);
+    font-weight: 900;
+}
+
+.Home .sectionText p {
+    padding: 1rem 0;
+    font-size: var(--normalFontSize);
+    font-weight: 500;
+}
+
+.Home .sectionText button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 2rem;
+    background-color: var(--primaryColor);
+    color: var(--whiteColor);
+    font-size: var(--h3FontSize);
+    font-weight: 500;
+    border: none;
+    border-radius: var(--borderRadius);
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.Home .sectionText button:hover {
+    background-color: var(--primaryColorLight);
+    transform: scale(1.05); /* Add scale effect on hover */
+}
+
+.Home .sectionText button .icon {
+    font-size: 1.2rem;
+}
+
+.Home .topAttractions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    position: absolute;
+    bottom: 10%;
+    width: 100%;
+}
+
+.Home .topAttractions .content {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem; /* Space between the text and images */
+}
+
+.Home .topAttractions .content h3 {
+    color: var(--whiteColor);
+    margin-right: 1rem; /* Spacing between the text and line */
+    white-space: nowrap; /* Prevent the text from wrapping */
+}
+
+.Home .topAttractions .content h3::after {
+    content: '';
+    width: 100px; /* Fixed width for the line */
+    height: 2px;
+    background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%); /* Add gradient line effect */
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 1rem; /* Spacing between the text and line */
+}
+
+.Home .topAttractions .images {
+    display: flex;
+    gap: 1rem;
+}
+
+.Home .topAttractions .images img {
+    height: 100px;
+    width: 210px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Add box shadow effect */
+    transition: transform 0.3s; /* Add transition effect */
+}
+
+.Home .topAttractions .images img:hover {
+    transform: translateY(-5px); /* Add translateY effect on hover */
+}
+
+@media screen and (min-width: 480px) {
+    .Home .sectionText {
+        padding: 0 2rem;
+    }
+
+    .Home .sectionText h1 {
+        font-size: var(--biggestFontSize);
+        font-weight: 900;
+    }
+
+    .Home .sectionText p {
+        padding: 1rem 0;
+        font-size: var(--h2FontSize);
+        max-width: 70%;
+        margin: auto;
+    }
+
+    .Home .sectionText .btn {
+        font-size: var(--h3FontSize);
+        margin: auto;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .Home .sectionText {
+        width: 100%;
+    }
+
+    .Home .sectionText h1 {
+        font-size: 4rem;
+        font-weight: 900;
+        max-width: 70%;
+        margin: auto;
+    }
+
+    .Home .sectionText p {
+        padding: 1rem 0;
+        font-size: var(--h2FontSize);
+        max-width: 70%;
+        margin: auto;
+    }
+
+    .Home .sectionText .btn {
+        gap: 0.5rem;
+        padding: 0 2rem;
+        font-size: var(--h3FontSize);
+        margin: auto;
+    }
+}
+/*
+@media screen and (min-width: 1040px) {
+    .Home .topAttractions {
+        padding: 0 4rem; 
+    }
+}*/

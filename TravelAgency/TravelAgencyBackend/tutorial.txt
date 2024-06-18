@@ -1,0 +1,57 @@
+- baze de date noua in SQL Server cu numele: TravelAgencyDB
+- in appsettings.json, dupa "TravelAgencyDB": pune connection stringul (cred ca trebuie schimbat numai data source-ul)
+- Tools -> NuGet Package Manager -> Package Manager Console
+- in consol: Add-Migration Initial
+- iara in consol: Update-Database (asta creeaza toate tabelele si le populeaza)
+- executa cu sageata verde, trebuie sa fie neaparat la http!
+
+- codul cu care am testat (o data numai o singura metoda functioneaza):
+
+document.getElementById("button").addEventListener("click", () => {
+    var emailField = document.getElementById("emailField").value;
+    var passwordField = document.getElementById("passwordField").value;
+
+    // - - - GET - - -
+    fetch(`http://localhost:3000/api/Accounts?mail=${emailField}`, {
+        method: "GET"
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data);
+        });
+
+    // - - - POST - - -
+    fetch(`http://localhost:3000/api/Accounts?mail=${emailField}`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            "mail": emailField,
+            "password": passwordField
+        })
+    })
+        .then((response) => response.json())
+        .then((data) => console.log(data));
+
+    // - - - PUT - - -
+    fetch(`http://localhost:3000/api/Accounts?mail=${emailField}`, {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            "mail": emailField,
+            "password": passwordField
+        })
+    })
+        .then((response) => response.json())
+        .then((data) => console.log(data));
+
+    // - - - DELETE - - -
+    fetch(`http://localhost:3000/api/Accounts?mail=${emailField}`, {
+        method: "DELETE"
+    })
+        .then((response) => response.json())
+        .then((data) => console.log(data));
+})
